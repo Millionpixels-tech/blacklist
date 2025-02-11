@@ -581,11 +581,11 @@
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 1;
             text-emphasis: inherit;
-            white-space: nowrap;
+            // white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis;
+            // text-overflow: ellipsis;
             display: block;
-            width: 260px;
+            width: 90%;
             @media (max-width: 767px) {
               -webkit-line-clamp: unset;
               text-emphasis: unset;

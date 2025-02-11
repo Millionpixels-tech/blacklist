@@ -7,14 +7,14 @@ import DropdownCommon from '../../Common/Dropdown';
 
 const ActivityCard = () => {
   return (
-    <Col xxl='4' xl='5' md='6' sm='7' className='notification box-col-6'>
+    <Col xxl='12' xl='12' md='12' sm='12' className='notification box-col-6'>
       <Card className='height-equal'>
         <CardHeader className='card-no-border'>
           <div className='header-top'>
-            <H5 attrH5={{ className: 'm-0' }}>{Activity}</H5>
-            <div className='card-header-right-icon'>
-              <DropdownCommon icon={false} options={DailyDropdown} btn={{ caret: true }} />
-            </div>
+            <H5 attrH5={{ className: 'm-0' }}>BlackListed History</H5>
+            <H5>
+            <span className='pull-right'>3 Times Backlisted</span>
+            </H5>
           </div>
         </CardHeader>
         <CardBody className='pt-0'>

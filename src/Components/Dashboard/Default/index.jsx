@@ -12,6 +12,8 @@ import TimelineCard from "./TimelineCard";
 import PreAccountCard from "./PreAccountCard";
 import TotalUserAndFollower from "./TotalUserAndFollower";
 import PaperNote from "./PaperNote";
+import SearchBox from "./SearchBox";
+import SearchResultCard from "./SearchResultCard";
 
 const Dashboard = () => {
   return (
@@ -19,16 +21,8 @@ const Dashboard = () => {
       <Breadcrumbs mainTitle="Default" parent="Dashboard" title="Default" />
       <Container fluid={true}>
         <Row className="widget-grid">
-          <GreetingCard />
-          <WidgetsWrapper />
-          <OverallBalance />
-          <RecentOrders />
-          <ActivityCard />
-          <RecentSales />
-          <TimelineCard />
-          <PreAccountCard />
-          <TotalUserAndFollower />
-          <PaperNote />
+          <SearchBox />
+          <SearchResultCard />
         </Row>
       </Container>
     </Fragment>

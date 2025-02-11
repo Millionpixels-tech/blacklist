@@ -123,24 +123,24 @@ export const LightCardData2 = [
 
 export const ActivityData = [
   {
-    title: 'Updated Product',
+    title: 'Videsta Foreign Employment Agency',
     subTitle: '8th March, 2022',
     time: '1 day ago',
-    dis: 'Quisque a consequat ante sit amet magna...',
+    dis: 'It has come to our attention that Punchihewa has engaged in actions that are contrary to the principles and trust upheld by our foreign employment agency. These actions include behaviors that have led to financial discrepancies and misrepresentation, ultimately breaching the trust of our agency and clients.',
     color: 'primary',
   },
   {
-    title: 'Tello just like your product',
+    title: 'Ahas Yathra Employment Agent',
     subTitle: '15th Oct, 2022 ',
-    time: 'Today',
-    dis: 'Quisque a consequat ante sit amet magna...',
+    time: '3 months ago',
+    dis: 'We regret to inform you that Punchihewa has violated the trust and ethical standards of our foreign employment agency. It has been discovered that their actions involved dishonest practices that have resulted in financial losses and disrupted operations. These actions are in direct conflict with the values we uphold as an organization.',
     color: 'warning',
   },
   {
-    title: 'Tello just like your product',
+    title: 'Rata Sihina (PVT) LTD',
     subTitle: '20th Sep, 2022',
-    time: '12:00 PM',
-    dis: 'Quisque a consequat ante sit amet magna...',
+    time: '1 year ago',
+    dis: 'It has come to our notice that Punchihewa has engaged in deceptive practices that have negatively impacted our foreign employment agency. These actions, which include misrepresentation and breach of trust, have caused financial and reputational harm to our organization.',
     color: 'secondary',
   },
 ];
