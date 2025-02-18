@@ -1,10 +1,10 @@
-import React from "react";
-import { Suspense, useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import LayoutRoutes from "../Route/LayoutRoutes";
+import Signin from "../Auth/Signin";
+import { authRoutes } from "./AuthRoutes";
 
 const Routers = () => {
-
   useEffect(() => {
     let abortController = new AbortController();
     console.ignoredYellowBox = ["Warning: Each", "Warning: Failed"];
@@ -18,10 +18,21 @@ const Routers = () => {
     <BrowserRouter basename={"/"}>
       <Suspense>
         <Routes>
-                <Route exact path={`${process.env.PUBLIC_URL}`} element={<Navigate to={`${process.env.PUBLIC_URL}/dashboard`} />} />
-                {/* <Route exact path={`/`} element={<Navigate to={`${process.env.PUBLIC_URL}/`} />} /> */}
-            <Route path={`/*`} element={<LayoutRoutes />} />
-    
+          {/* Redirect to login page on initial load */}
+          <Route
+            exact
+            path={`${process.env.PUBLIC_URL}`}
+            element={<Navigate to={`${process.env.PUBLIC_URL}/login`} />}
+          />
+          <Route path={`/*`} element={<LayoutRoutes />} />
+          <Route
+            exact
+            path={`${process.env.PUBLIC_URL}/login`}
+            element={<Signin />}
+          />
+          {authRoutes.map(({ path, Component }, i) => (
+            <Route path={path} element={Component} key={i} />
+          ))}
         </Routes>
       </Suspense>
     </BrowserRouter>
