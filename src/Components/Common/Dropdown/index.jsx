@@ -1,19 +1,29 @@
 import React, { useState } from 'react';
 import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap';
+import './DropdownCommon.css'; // Import styles
+import { FaChevronDown } from 'react-icons/fa';
 
-const DropdownCommon = ({ dropdownMain, icon = true, iconName, btn, options }) => {
+const DropdownCommon = ({ options }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(options[0]); // Default: First option from props
+
   const toggle = () => setDropdownOpen((prevState) => !prevState);
 
+  const handleSelect = (option) => {
+    setSelectedOption(option);
+    setDropdownOpen(false);
+  };
+
   return (
-    <Dropdown {...dropdownMain} isOpen={dropdownOpen} toggle={toggle}>
-      <DropdownToggle {...btn}>
-        {icon && <i className={iconName}></i>}
-        {!icon && options[0]}
+    <Dropdown isOpen={dropdownOpen} toggle={toggle} className="custom-dropdown">
+      <DropdownToggle className="dropdown-btn">
+      {selectedOption} <FaChevronDown className="dropdown-arrow" />
       </DropdownToggle>
-      <DropdownMenu>
-        {options.map((item, i) => (
-          <DropdownItem key={i}>{item}</DropdownItem>
+      <DropdownMenu className="animated-dropdown">
+        {options.map((item, index) => (
+          <DropdownItem key={index} onClick={() => handleSelect(item)}>
+            {item}
+          </DropdownItem>
         ))}
       </DropdownMenu>
     </Dropdown>
