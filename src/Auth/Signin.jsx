@@ -66,7 +66,7 @@ const Signin = ({ selected }) => {
                         {RememberPassword}
                       </Label>
                     </div>
-                    <a className="link" href="#javascript">
+                    <a className="link" href="/pages/authentication/forget-pwd">
                       {ForgotPassword}
                     </a>
                     <Btn attrBtn={{ color: "primary", className: "d-block w-100 mt-2", onClick: (e) => loginAuth(e) }}>{SignIn}</Btn>
