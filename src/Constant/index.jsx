@@ -387,12 +387,13 @@ export const Print = "Print";
 // Users
 
 export const MarekjecnoMailId = "Marekjecno@yahoo.com";
-export const BOD = "BOD";
+export const BOD = "Registered Date";
 export const DDMMYY = "02 January 1988";
-export const Designer = "designer";
-export const ContactUsNumber = "India +91 123-456-7890";
+export const Designer = "Agency";
+export const ContactUsNumber = "LK +94 123-456-7890";
 export const LocationDetails = "B69 Near Schoool Demo Home";
 export const JOHANDIO = "JOHAN DIO";
+export const Videsta = "Videsta Foreign Employment Agency";
 export const UserProfileDesc1 = "you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.";
 export const UserProfileDesc4 =
   "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source .Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source";
@@ -439,6 +440,7 @@ export const Send = "SEND";
 // email
 export const MARKJENCO = "MARK JENCO";
 export const MARKJENCOEMAIL = "Markjecno@gmail.com";
+export const VidestaEmail = "videstaforeign@gmail.com";
 export const NEWMAIL = "NEW MAIL";
 export const Inbox = "Inbox";
 export const AllMail = "All mail";
