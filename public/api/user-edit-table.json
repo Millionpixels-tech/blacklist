@@ -1,37 +1,23 @@
 [
     {
         "id": 1,
-        "projectName": "Untrammelled prevents",
-        "date": "28 May 2022",
-        "status": "Completed",
-        "price": "$56,908"
+        "projectName": "Videsta Foreign Employment Agency",
+        "date": "08 March 2022",
+        "status": "Blacklisted",
+        "desc": "It has come to our attention that Punchihewa has engaged in actions that are contrary to the principles and trust upheld by our foreign employment agency. These actions include behaviors that have led to financial discrepancies and misrepresentation, ultimately breaching the trust of our agency and clients."
     },
     {
         "id": 2,
-        "projectName": "Untrammelled prevents",
-        "date": "12 June 2022",
-        "status": "On going",
-        "price": "$45,087"
+        "projectName": "Ahas Yathra Employment Agent",
+        "date": "15 Oct 2022",
+        "status": "Blacklisted",
+        "desc": "We regret to inform you that Punchihewa has violated the trust and ethical standards of our foreign employment agency. It has been discovered that their actions involved dishonest practices that have resulted in financial losses and disrupted operations. These actions are in direct conflict with the values we uphold as an organization."
     },
     {
         "id": 3,
-        "projectName": "Untrammelled prevents",
-        "date": "12 June 2022",
-        "status": "Pending",
-        "price": "$60,123"
-    },
-    {
-        "id": 4,
-        "projectName": "Untrammelled prevents",
-        "date": "14 June 2022",
-        "status": "Pending",
-        "price": "$70,435"
-    },
-    {
-        "id": 5,
-        "projectName": "Untrammelled prevents",
-        "date": "25 June 2022",
-        "status": "Completed",
-        "price": "$15,987"
+        "projectName": "Rata Sihina (PVT) LTD",
+        "date": "20 Sep 2022",
+        "status": "Blacklisted",
+        "desc": "It has come to our notice that Punchihewa has engaged in deceptive practices that have negatively impacted our foreign employment agency. These actions, which include misrepresentation and breach of trust, have caused financial and reputational harm to our organization."
     }
 ]

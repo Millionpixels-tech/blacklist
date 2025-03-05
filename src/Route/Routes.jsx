@@ -1,7 +1,7 @@
 // dashbaord
 // import Crypto from "../Components/Dashboard/Crypto";
 import Default from "../Components/Dashboard/Default";
-import UserProfile from "../Components/Users";
+import UserProfile from "../Components/UsersEdit";
 // import Ecommerce from "../Components/Dashboard/Ecommerce";
 // import OnlineCourse from "../Components/Dashboard/OnlineCourse";
 // import Social from "../Components/Dashboard/Social";
@@ -121,7 +121,7 @@ import UserProfile from "../Components/Users";
 
 // //User app
 // import UsersCardssContain from "../Components/Application/Users/UsersCards";
-// import UsersEditContain from "../Components/Application/Users/UsersEdit";
+import UsersEditContain from "../Components/UsersEdit";
 // import UsersProfileContain from "../Components/Application/Users/UsersProfile";
 
 // //social app
@@ -283,7 +283,7 @@ export const routes = [
   // { path: `${process.env.PUBLIC_URL}/app/todo-app/todo/:layout`, Component: <TodoContain /> },
 
   // { path: `${process.env.PUBLIC_URL}/app/users/profile/:layout`, Component: <UsersProfileContain /> },
-  // { path: `${process.env.PUBLIC_URL}/app/users/edit/:layout`, Component: <UsersEditContain /> },
+  { path: `${process.env.PUBLIC_URL}/users/edit`, Component: <UsersEditContain /> },
   // { path: `${process.env.PUBLIC_URL}/app/users/cards/:layout`, Component: <UsersCardssContain /> },
   // { path: `${process.env.PUBLIC_URL}/app/social-app/:layout`, Component: <SocialAppContain /> },
 
