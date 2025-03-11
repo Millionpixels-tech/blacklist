@@ -1,7 +1,8 @@
 // dashbaord
 // import Crypto from "../Components/Dashboard/Crypto";
 import Default from "../Components/Dashboard/Default";
-import UserProfile from "../Components/UsersEdit";
+import UserProfile from "../Components/users";
+import AddUserPage from "../pages/AddUserPage";
 // import Ecommerce from "../Components/Dashboard/Ecommerce";
 // import OnlineCourse from "../Components/Dashboard/OnlineCourse";
 // import Social from "../Components/Dashboard/Social";
@@ -184,6 +185,7 @@ import UsersEditContain from "../Components/UsersEdit";
 export const routes = [
   { path: `${process.env.PUBLIC_URL}/dashboard`, Component: <Default /> },
   { path: `${process.env.PUBLIC_URL}/user-profile`, Component: <UserProfile /> },
+  { path: `${process.env.PUBLIC_URL}/adduser`, Component: <AddUserPage /> },
   // { path: `${process.env.PUBLIC_URL}/dashboard/e-commerce/:layout`, Component: <Ecommerce /> },
   // { path: `${process.env.PUBLIC_URL}/dashboard/online-course/:layout`, Component: <OnlineCourse /> },
   // { path: `${process.env.PUBLIC_URL}/dashboard/crypto/:layout`, Component: <Crypto /> },
