@@ -3,7 +3,6 @@ import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import { H5, UL, LI } from '../../../AbstractElements';
 import { Earning, Expense, OverallBalanceTitle } from '../../../Constant';
 import LightCard from './LitghtCard';
-import ReactApexChart from 'react-apexcharts';
 import { CurrencyChartData } from '../../../Data/DefaultDashboard/Chart';
 import { LightCardData } from '../../../Data/DefaultDashboard';
 const OverallBalance = () => {
@@ -30,9 +29,9 @@ const OverallBalance = () => {
                           <span className='f-light ms-1'>{Expense}</span>
                         </LI>
                       </UL>
-                      <div className='current-sale-container'>
+                      {/* <div className='current-sale-container'>
                         <ReactApexChart type='bar' height={300} options={CurrencyChartData.options} series={CurrencyChartData.series} />
-                      </div>
+                      </div> */}
                     </CardBody>
                   </Col>
                 </Row>

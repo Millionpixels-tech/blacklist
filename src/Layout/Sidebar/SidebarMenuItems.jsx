@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import SvgIcon from "../../Components/Common/Component/SvgIcon";
 import { MENUITEMS } from "./Menu";
@@ -10,7 +9,6 @@ const SidebarMenuItems = ({ setMainMenu, sidebartoogle, setNavActive, activeClas
   const layoutId = id;
   const CurrentPath = window.location.pathname;
 
-  const { t } = useTranslation();
   const toggletNavActive = (item) => {
     if (window.innerWidth <= 991) {
       document.querySelector(".page-header").className = "page-header close_icon";
@@ -52,7 +50,7 @@ const SidebarMenuItems = ({ setMainMenu, sidebartoogle, setNavActive, activeClas
         <Fragment key={i}>
           <li className="sidebar-main-title">
             <div>
-              <h6 className="lan-1">{t(Item.menutitle)}</h6>
+              <h6 className="lan-1">{Item.menutitle}</h6>
             </div>
           </li>
           {Item.Items.map((menuItem, i) => (
@@ -68,7 +66,7 @@ const SidebarMenuItems = ({ setMainMenu, sidebartoogle, setNavActive, activeClas
                   }}>
                   <SvgIcon className="stroke-icon" iconId={`stroke-${menuItem.icon}`} />
                   <SvgIcon className="fill-icon" iconId={`fill-${menuItem.icon}`} />
-                  <span>{t(menuItem.title)}</span>
+                  <span>{menuItem.title}</span>
                   {menuItem.badge ? <label className={menuItem.badge}>{menuItem.badgetxt}</label> : ""}
                   <div className="according-menu">{menuItem.active ? <i className="fa fa-angle-down"></i> : <i className="fa fa-angle-right"></i>}</div>
                 </a>
@@ -80,7 +78,7 @@ const SidebarMenuItems = ({ setMainMenu, sidebartoogle, setNavActive, activeClas
                 <Link to={menuItem.path + "/" + layoutId} className={`sidebar-link sidebar-title link-nav  ${CurrentPath.includes(menuItem.title.toLowerCase()) ? "active" : ""}`} onClick={() => toggletNavActive(menuItem)}>
                   <SvgIcon className="stroke-icon" iconId={`stroke-${menuItem.icon}`} />
                   <SvgIcon className="fill-icon" iconId={`fill-${menuItem.icon}`} />
-                  <span>{t(menuItem.title)}</span>
+                  <span>{menuItem.title}</span>
                   {menuItem.badge ? <label className={menuItem.badge}>{menuItem.badgetxt}</label> : ""}
                 </Link>
               ) : (
@@ -101,7 +99,7 @@ const SidebarMenuItems = ({ setMainMenu, sidebartoogle, setNavActive, activeClas
                               event.preventDefault();
                               toggletNavActive(childrenItem);
                             }}>
-                            {t(childrenItem.title)}
+                            {childrenItem.title}
                             <span className="sub-arrow">
                               <i className="fa fa-chevron-right"></i>
                             </span>
@@ -117,7 +115,7 @@ const SidebarMenuItems = ({ setMainMenu, sidebartoogle, setNavActive, activeClas
                             className={`${CurrentPath.includes(childrenItem?.title?.toLowerCase()) ? "active" : ""}`}
                             // className={`${childrenItem.active ? 'active' : ''}`} bonusui
                             onClick={() => toggletNavActive(childrenItem)}>
-                            {t(childrenItem.title)}
+                            {childrenItem.title}
                           </Link>
                         ) : (
                           ""
@@ -133,7 +131,7 @@ const SidebarMenuItems = ({ setMainMenu, sidebartoogle, setNavActive, activeClas
                                     className={`${CurrentPath.includes(childrenSubItem?.title?.toLowerCase()) ? "active" : ""}`}
                                     // className={`${childrenSubItem.active ? 'active' : ''}`}
                                     onClick={() => toggletNavActive(childrenSubItem)}>
-                                    {t(childrenSubItem.title)}
+                                    {childrenSubItem.title}
                                   </Link>
                                 ) : (
                                   ""

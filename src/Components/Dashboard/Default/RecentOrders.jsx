@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactApexChart from 'react-apexcharts';
 import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import { H5, UL, LI, H4 } from '../../../AbstractElements';
 import { Cancelled,  Delivered, LastMonth, profit, profit2, RecentOrdersTitle, WeeklyMonDropdown } from '../../../Constant';
@@ -21,9 +20,9 @@ const RecentOrders = () => {
         <CardBody className='pt-0'>
           <Row className='recent-wrapper'>
             <Col xl='6'>
-              <div className='recent-chart'>
+              {/* <div className='recent-chart'>
                 <ReactApexChart type='radialBar' height={290} options={RecentOrderChart.options} series={RecentOrderChart.series} />
-              </div>
+              </div> */}
             </Col>
             <Col xl='6'>
               <UL attrUL={{ className: 'order-content' }}>

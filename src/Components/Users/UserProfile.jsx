@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from 'react';
 import { Col, Card, CardHeader, Row } from 'reactstrap';
-import CountUp from 'react-countup';
 import { H6, Image, LI, UL } from '../../AbstractElements';
 import { BOD, ContactUs, ContactUsNumber, DDMMYY, Designer, Email, Follower, Following, LocationDetails, VidestaEmail, Videsta, Location } from '../../Constant';
 

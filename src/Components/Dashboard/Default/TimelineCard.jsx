@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactApexChart from 'react-apexcharts';
 import { Card, CardBody, CardHeader, Col } from 'reactstrap';
 import { H5 } from '../../../AbstractElements';
 import { DailyDropdown, Timeline } from '../../../Constant';
@@ -20,9 +19,9 @@ const TimelineCard = () => {
             </div>
           </CardHeader>
           <CardBody className='pt-0'>
-            <div className='schedule-container'>
+            {/* <div className='schedule-container'>
               <ReactApexChart height={355} type='rangeBar' options={TimeLineChart.options} series={TimeLineChart.series} />
-            </div>
+            </div> */}
           </CardBody>
         </Card>
       </div>

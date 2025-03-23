@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactApexChart from 'react-apexcharts';
 import { Card, CardBody, CardHeader } from 'reactstrap';
 import { H5 } from '../../../AbstractElements';
 import { FollowersGrowth, WeeklyMonDropdown } from '../../../Constant';
@@ -16,9 +15,9 @@ const FollowerGrowth = () => {
         </div>
       </CardHeader>
       <CardBody className='pt-0'>
-        <div className='growth-wrapper'>
+        {/* <div className='growth-wrapper'>
           <ReactApexChart height={200} type='line' options={GrowthChartData.options} series={GrowthChartData.series} />
-        </div>
+        </div> */}
       </CardBody>
     </Card>
   );

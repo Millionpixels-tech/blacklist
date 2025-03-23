@@ -1,17 +1,13 @@
 import React, { Fragment } from "react";
 import { Btn, H4 } from "../../AbstractElements";
-import { useForm } from "react-hook-form";
 import { Row, Col, CardHeader, CardBody, CardFooter, Form, FormGroup, Label, Input } from 'reactstrap'
 import { EditProfile, Company, Username, UsersCountryMenu, AboutMe, UpdateProfile, FirstName, LastName, Address, EmailAddress, PostalCode, Country, City } from '../../Constant';
 
 const EditMyProfile = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onEditSubmit = (data) => {
-        alert(data)
-    }
+
     return (
         <Fragment>
-            <Form className="card" onSubmit={handleSubmit(onEditSubmit)}>
+            <Form className="card">
                 <CardHeader>
                     <H4 attrH4={{ className: "card-title mb-0" }}>{EditProfile}</H4>
                     <div className="card-options">
@@ -27,27 +23,27 @@ const EditMyProfile = () => {
                     <Row>
                         <Col md="12">
                             <FormGroup><Label className="form-label">Company Name</Label>
-                                <Input className="form-control" type="text" placeholder="Company Name" {...register("LastName", { required: true })} /><span style={{ color: "red" }}>{errors.LastName && 'Company Name is required'} </span>
+                                <Input className="form-control" type="text" placeholder="Company Name" /><span style={{ color: "red" }}>{'Company Name is required'} </span>
                             </FormGroup>
                         </Col>
                         <Col sm="6" md="6">
                             <FormGroup> <Label className="form-label">Company Registration No</Label>
-                                <Input className="form-control" type="text" placeholder="Reg No" {...register("NIC", { required: true })} /><span style={{ color: "red" }}>{errors.Username && 'NIC is required'} </span>
+                                <Input className="form-control" type="text" placeholder="Reg No"  /><span style={{ color: "red" }}>{'NIC is required'} </span>
                             </FormGroup>
                         </Col>
                         <Col sm="6" md="6">
                             <FormGroup> <Label className="form-label">{EmailAddress}</Label>
-                                <Input className="form-control" type="email" placeholder="Email" {...register("EmailAddress", { required: true })} /><span style={{ color: "red" }}>{errors.EmailAddress && 'EmailAddress is required'} </span>
+                                <Input className="form-control" type="email" placeholder="Email" /><span style={{ color: "red" }}>{'EmailAddress is required'} </span>
                             </FormGroup>
                         </Col>
                         <Col md="12">
                             <FormGroup><Label className="form-label">{Address}</Label>
-                                <Input className="form-control" type="text" placeholder="Company Address" {...register("Address", { required: true })} /><span style={{ color: "red" }}>{errors.Address && 'Address is required'} </span>
+                                <Input className="form-control" type="text" placeholder="Company Address"  /><span style={{ color: "red" }}>{'Address is required'} </span>
                             </FormGroup>
                         </Col>
                         <Col sm="6" md="4">
                             <FormGroup> <Label className="form-label">{City}</Label>
-                                <Input className="form-control" type="text" placeholder="City" {...register("City", { required: true })} /><span style={{ color: "red" }}>{errors.City && 'City is required'} </span>
+                                <Input className="form-control" type="text" placeholder="City"/><span style={{ color: "red" }}>{'City is required'} </span>
                             </FormGroup>
                         </Col>
                         <Col sm="6" md="3">

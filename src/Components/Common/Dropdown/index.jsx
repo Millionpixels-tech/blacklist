@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap';
 import './DropdownCommon.css'; // Import styles
-import { FaChevronDown } from 'react-icons/fa';
 
 const DropdownCommon = ({ options }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -17,7 +16,7 @@ const DropdownCommon = ({ options }) => {
   return (
     <Dropdown isOpen={dropdownOpen} toggle={toggle} className="custom-dropdown">
       <DropdownToggle className="dropdown-btn">
-      {selectedOption} <FaChevronDown className="dropdown-arrow" />
+      {selectedOption}
       </DropdownToggle>
       <DropdownMenu className="animated-dropdown">
         {options.map((item, index) => (

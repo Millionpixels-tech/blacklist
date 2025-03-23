@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { Fragment, useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardHeader } from 'reactstrap';
@@ -9,15 +8,6 @@ import CustomizerContext from '../../_helper/Customizer';
 
 const UserTable = () => {
   const [data, setData] = useState([]);
-  useEffect(() => {
-    let isMounted = true;
-    if (isMounted) {
-      axios.get(UserEditTableAPI).then((res) => setData(res.data));
-    }
-    return () => {
-      isMounted = false;
-    };
-  }, []);
 
   return (
     <Fragment>
