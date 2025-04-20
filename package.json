@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://react.pixelstrap.com/",
+  "engines": {
+    "node": "18"
+  },
   "dependencies": {
     "apexcharts": "^3.39.0",
     "axios": "^1.8.4",
