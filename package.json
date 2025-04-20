@@ -10,6 +10,7 @@
     "apexcharts": "^3.39.0",
     "axios": "^1.8.4",
     "bootstrap-scss": "^5.2.3",
+    "dot-env": "^0.0.1",
     "feather-icons": "^4.29.0",
     "knob": "^1.1.0",
     "react-bootstrap": "^2.7.4",

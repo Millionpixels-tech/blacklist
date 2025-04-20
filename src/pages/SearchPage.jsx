@@ -21,7 +21,7 @@ const SearchPage = () => {
       const token = localStorage.getItem("accessToken"); 
 
       const response = await axios.get(
-        `http://localhost:8080/api/profiles/person/${nic}`,
+        `${process.env.REACT_APP_BACKEND_SERVER}/api/profiles/person/${nic}`,
         {
           headers: {
             Authorization: `Bearer ${token}`

@@ -38,7 +38,7 @@ const EditMyProfile = () => {
     
           const token = localStorage.getItem("accessToken"); 
     
-          const response = await axios.post('http://localhost:8080/api/profiles/update', {
+          const response = await axios.post(`${process.env.REACT_APP_BACKEND_SERVER}/api/profiles/update`, {
             id: id,
             category: formData.category,
             fullName: formData.fullName,
@@ -76,7 +76,7 @@ const EditMyProfile = () => {
     
           const token = localStorage.getItem("accessToken"); 
     
-          const response = await axios.post('http://localhost:8080/api/profiles/delete', {
+          const response = await axios.post(`${process.env.REACT_APP_BACKEND_SERVER}/api/profiles/delete`, {
             id: id
           },
           {
@@ -114,7 +114,7 @@ const EditMyProfile = () => {
             const token = localStorage.getItem("accessToken"); 
 
             const response = await axios.get(
-                `http://localhost:8080/api/profiles/person/get/${id}`,
+              `${process.env.REACT_APP_BACKEND_SERVER}/api/profiles/person/get/${id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

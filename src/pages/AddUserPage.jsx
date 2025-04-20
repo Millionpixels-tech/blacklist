@@ -46,7 +46,7 @@ const AddUserPage = () => {
 
       const token = localStorage.getItem("accessToken"); 
 
-      const response = await axios.post('http://localhost:8080/api/profiles/add', {
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_SERVER}/api/profiles/add`, {
         category: userType,
         fullName: formData.fullName,
         nic: formData.nicNumber,
