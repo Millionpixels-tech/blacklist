@@ -20,25 +20,39 @@ const RegisterFrom = ({ logoClassMain }) => {
           </div>
           <div className='login-main'>
             <Form className='theme-form login-form'>
-              <H4>Create your account</H4>
-              <P>Enter your personal details to create account</P>
+              <H4>Register</H4>
+              <P>Enter Agency Details to Create an Account</P>
               <FormGroup>
-                <Label className='col-form-label m-0 pt-0'>Your Name</Label>
-                <Row className='g-2'>
-                  <Col xs='6'>
-                    <Input className='form-control' type='text' required='' placeholder='Fist Name' />
+                <Label className='col-form-label m-0 pt-0'>Agency Name</Label>
+
+                  <Col xs='12'>
+                    <Input className='form-control' type='text' required='' placeholder='Agency Name' />
                   </Col>
-                  <Col xs='6'>
-                    <Input className='form-control' type='email' required='' placeholder='Last Name' />
-                  </Col>
-                </Row>
+
               </FormGroup>
               <FormGroup>
-                <Label className='col-form-label m-0 pt-0'>Email Address</Label>
-                <Input className='form-control' type='email' required='' placeholder='Test@gmail.com' />
+                <Label className='col-form-label m-0 pt-0'>Agency Register Number</Label>
+
+                  <Col xs='12'>
+                    <Input className='form-control' type='text' required='' placeholder='Agency Register Number' />
+                  </Col>
+  
+              </FormGroup>
+              <FormGroup>
+                <Label className='col-form-label m-0 pt-0'>Agency Email Address</Label>
+                <Input className='form-control' type='email' required='' placeholder='test@gmail.com' />
               </FormGroup>
               <FormGroup className='position-relative'>
                 <Label className='col-form-label m-0 pt-0'>Password</Label>
+                <div className='position-relative'>
+                  <Input className='form-control' type={togglePassword ? 'text' : 'password'} name='login[password]' required placeholder='*********' />
+                  <div className='show-hide' onClick={() => setTogglePassword(!togglePassword)}>
+                    <span className={togglePassword ? '' : 'show'}></span>
+                  </div>
+                </div>
+              </FormGroup>
+              <FormGroup className='position-relative'>
+                <Label className='col-form-label m-0 pt-0'>Re Enter Password</Label>
                 <div className='position-relative'>
                   <Input className='form-control' type={togglePassword ? 'text' : 'password'} name='login[password]' required placeholder='*********' />
                   <div className='show-hide' onClick={() => setTogglePassword(!togglePassword)}>
@@ -57,28 +71,16 @@ const RegisterFrom = ({ logoClassMain }) => {
               <FormGroup>
                 <Btn attrBtn={{ className: 'd-block w-100', color: 'primary', type: 'submit' }}>Create Account</Btn>
               </FormGroup>
-              <div className='login-social-title'>
-                <H6 attrH6={{ className: 'text-muted or mt-4' }}>Or Sign up with</H6>
-              </div>
+             
               <div className='social my-4 '>
                 <div className='btn-showcase'>
-                  <a className='btn btn-light' href='https://www.linkedin.com/login' rel='noreferrer' target='_blank'>
-                    <Linkedin className='txt-linkedin' /> LinkedIn
-                  </a>
-                  <a className='btn btn-light' href='https://twitter.com/login?lang=en' rel='noreferrer' target='_blank'>
-                    <Twitter className='txt-twitter' />
-                    twitter
-                  </a>
-                  <a className='btn btn-light' href='https://www.facebook.com/' rel='noreferrer' target='_blank'>
-                    <Facebook className='txt-fb' />
-                    facebook
-                  </a>
+                 
                 </div>
               </div>
               <P attrPara={{ className: 'mb-0 text-start' }}>
-                Already have an account?
+                Already have an agency account?
                 <Link className='ms-2' to={`${process.env.PUBLIC_URL}/pages/authentication/login-simple`}>
-                  Sign in
+                  Log In
                 </Link>
               </P>
             </Form>

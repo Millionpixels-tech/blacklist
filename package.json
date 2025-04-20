@@ -5,6 +5,7 @@
   "homepage": "https://react.pixelstrap.com/",
   "dependencies": {
     "apexcharts": "^3.39.0",
+    "axios": "^1.8.4",
     "bootstrap-scss": "^5.2.3",
     "feather-icons": "^4.29.0",
     "knob": "^1.1.0",

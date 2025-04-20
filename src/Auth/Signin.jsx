@@ -1,17 +1,18 @@
 import React, { Fragment, useState, useEffect, } from "react";
 import { Col, Container, Form, FormGroup, Input, Label, Row } from "reactstrap";
 import { Btn, H4, P } from "../AbstractElements";
-import { EmailAddress, ForgotPassword, Password, RememberPassword, SignIn } from "../Constant";
+import { Data, EmailAddress, ForgotPassword, Password, RememberPassword, SignIn } from "../Constant";
 
 import { useNavigate } from "react-router-dom";
 import man from "../assets/images/dashboard/profile.png";
 
 import OtherWay from "./OtherWay";
 import { ToastContainer, toast } from "react-toastify";
+import axios from 'axios';
 
 const Signin = ({ selected }) => {
-  const [email, setEmail] = useState("test@gmail.com");
-  const [password, setPassword] = useState("test123");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [togglePassword, setTogglePassword] = useState(false);
   const history = useNavigate();
 
@@ -20,20 +21,39 @@ const Signin = ({ selected }) => {
 
   useEffect(() => {
     localStorage.setItem("profileURL", man);
-    localStorage.setItem("Name", "Emay Walter");
+    localStorage.setItem("Name", "Videsta");
   }, [value, name]);
 
   const loginAuth = async (e) => {
     e.preventDefault();
-    setValue(man);
-    setName("Emay Walter");
-    if (email === "test@gmail.com" && password === "test123") {
-      localStorage.setItem("login", JSON.stringify(true));
-      history(`${process.env.PUBLIC_URL}/dashboard`);
-      toast.success("Successfully logged in!..");
-    } else {
-      toast.error("You enter wrong password or username!..");
-    }
+
+    try {
+
+      const response = await axios.post('http://localhost:8080/api/auth/login', {
+        "email": email,
+        "password": password
+      });
+
+      localStorage.setItem("accessToken", response.data.accessToken);
+
+      history(`${process.env.PUBLIC_URL}/search-user`);
+
+    } catch (error){
+      localStorage.setItem("accessToken", null);
+      toast.error("Password or email is incorrect. Try Again");
+  }
+
+  //localStorage.setItem("login", JSON.stringify(true));
+
+    // setValue(man);
+    // setName("Videsta");
+    // if (email === "test@gmail.com" && password === "test123") {
+    //   localStorage.setItem("login", JSON.stringify(true));
+    //   history(`${process.env.PUBLIC_URL}/search-user`);
+    //   toast.success("Successfully logged in!..");
+    // } else {
+    //   toast.error("You enter wrong password or username!..");
+    // }
   };
 
   return (
@@ -44,8 +64,8 @@ const Signin = ({ selected }) => {
             <div className="login-card">
               <div className="login-main login-tab">
                 <Form className="theme-form">
-                  <H4>{selected === "simpleLogin" ? "" : "Sign In With Simple Login"}</H4>
-                  <P>{"Enter your email & password to login"}</P>
+                  <H4>{selected === "simpleLogin" ? "" : "Login"}</H4>
+                  <P>{"Enter your email & password to log your agency account"}</P>
                   <FormGroup>
                     <Label className="col-form-label">{EmailAddress}</Label>
                     <Input className="form-control" type="email" onChange={(e) => setEmail(e.target.value)} value={email} />
@@ -69,7 +89,7 @@ const Signin = ({ selected }) => {
                     <a className="link" href="/pages/authentication/forget-pwd">
                       {ForgotPassword}
                     </a>
-                    <Btn attrBtn={{ color: "primary", className: "d-block w-100 mt-2", onClick: (e) => loginAuth(e) }}>{SignIn}</Btn>
+                    <Btn attrBtn={{ color: "primary", className: "d-block w-100 mt-2", onClick: (e) => loginAuth(e) }}>Login</Btn>
                   </div>
                   <OtherWay />
                 </Form>

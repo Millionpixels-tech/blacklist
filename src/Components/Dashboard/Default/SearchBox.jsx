@@ -6,7 +6,8 @@ import { CardBody, CardHeader, Form, Input, Row, Col, Card, Container, TabConten
 // import VideoTabs from './VideoTabs';
 import { Breadcrumbs } from '../../../AbstractElements';
 
-const SearchBox = () => {
+const SearchBox = ({searchUser}) => {
+  const [nic, setNic] = useState(null);
   const [activeTab, setActiveTab] = useState('1');
   const callback = useCallback(
     (tab) => {
@@ -23,8 +24,10 @@ const SearchBox = () => {
               <CardHeader>
                 <Form className='theme-form'>
                   <div className='input-group flex-nowrap'>
-                    <Input className='form-control-plaintext' type='search' placeholder='Search blacklisted customers, sub agents..' />
-                    <span className='btn btn-primary input-group-text'>Search</span>
+                    <Input className='form-control-plaintext' onChange={(e) => {setNic(e.target.value)}} type='search' placeholder='Search blacklisted customers, sub agents..' />
+                    <span className='btn btn-primary input-group-text' onClick={()=>{
+                      searchUser(nic);
+                    }}>Search Person</span>
                   </div>
                 </Form>
               </CardHeader>

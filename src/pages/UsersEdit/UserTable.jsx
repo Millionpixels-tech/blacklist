@@ -13,7 +13,7 @@ const UserTable = () => {
     <Fragment>
       <Card>
         <CardHeader>
-          <H4 attrH4={{ className: 'card-title mb-0' }}>{CompanyTableTitle}</H4>
+          <H4 attrH4={{ className: 'card-title mb-0' }}>Added Complains</H4>
           <div className='card-options'>
             <a className='card-options-collapse' href='#javascript' data-toggle='card-collapse'>
               <i className='fe fe-chevron-up'></i>

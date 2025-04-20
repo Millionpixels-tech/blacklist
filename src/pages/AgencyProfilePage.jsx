@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from 'react';
 import { Col, Card, CardHeader, Row } from 'reactstrap';
-import { H6, Image, LI, UL } from '../../AbstractElements';
-import { BOD, ContactUs, ContactUsNumber, DDMMYY, Designer, Email, Follower, Following, LocationDetails, VidestaEmail, Videsta, Location } from '../../Constant';
+import { H6, Image, LI, UL } from '../AbstractElements';
+import { BOD, ContactUs, ContactUsNumber, DDMMYY, Designer, Email, Follower, Following, LocationDetails, VidestaEmail, Videsta, Location } from '../Constant';
 
-const UserProfile = () => {
+const AgencyProfile = () => {
   const [url, setUrl] = useState('');
 
   const readUrl = (event) => {
@@ -21,12 +21,13 @@ const UserProfile = () => {
   };
   return (
     <Fragment>
+        <div className="user-profile">
       <Col sm='12'>
         <Card className='hovercard text-center'>
           <CardHeader className='cardheader'></CardHeader>
           <div className='user-image'>
             <div className='avatar'>
-              <Image attrImage={{ className: 'step1', alt: '', src: `${url ? url : require('../../assets/images/user/7.jpg')}` }} />
+              <Image attrImage={{ className: 'step1', alt: '', src: `${url ? url : require('../assets/images/user/7.jpg')}` }} />
             </div>
             <div className='icon-wrapper step2' data-intro='Change Profile image here'>
               <i className='icofont icofont-pencil-alt-5' onChange={(e) => readUrl(e)}>
@@ -123,8 +124,9 @@ const UserProfile = () => {
           </div>
         </Card>
       </Col>
+      </div>
     </Fragment>
   );
 };
 
-export default UserProfile;
+export default AgencyProfile;

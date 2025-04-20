@@ -4,7 +4,7 @@ import { Card, Col, CardBody } from "reactstrap";
 import { Link } from "react-router-dom";
 import ActivityCard from "./ActivityCard";
 
-const SearchResultCard = ({ colClass, foundUser }) => {
+const NoSearchResult = ({ colClass }) => {
   return (
     <Fragment>
       <Col className={colClass}>
@@ -18,28 +18,11 @@ const SearchResultCard = ({ colClass, foundUser }) => {
               <div className="media">
                 <div className="media-body">
                   <H2 attrH6={{ className: "f-w-600" }}>
-                    <Link
-                      to={`${process.env.PUBLIC_URL}/app/jobSearch/job-detail`}
-                    >
-                      {foundUser.fullName}
-                    </Link>
-                    {/* <span className='pull-right'>2 days ago</span> */}
-                    {/* Edit Icon */}
-                    <span> <Link
-                      to={`${process.env.PUBLIC_URL}/blacklist-Person/edit/${foundUser.id}`}
-                      className="edit-icon"
-                    >
-                      <i className="fa fa-pencil"></i>
-                    </Link></span>
-                   
+                      No Blacklist User Found
                   </H2>
-                  <P>ID: {foundUser.nic}</P>
                 </div>
               </div>
-              <P>
-                {foundUser.description}
-              </P>
-              {/* <ActivityCard /> */}
+        
             </CardBody>
           </div>
         </Card>
@@ -48,4 +31,4 @@ const SearchResultCard = ({ colClass, foundUser }) => {
   );
 };
 
-export default SearchResultCard;
+export default NoSearchResult;

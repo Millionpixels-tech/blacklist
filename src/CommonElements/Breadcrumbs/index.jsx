@@ -16,7 +16,7 @@ const Breadcrumbs = (props) => {
             <Col xs='6'>
               <ol className='breadcrumb'>
                 <li className='breadcrumb-item'>
-                  <Link to={`${process.env.PUBLIC_URL}/dashboard/default/Dubai`}>
+                  <Link to={`${process.env.PUBLIC_URL}/search-user`}>
                     <SvgIcon iconId='stroke-home' />
                   </Link>
                 </li>

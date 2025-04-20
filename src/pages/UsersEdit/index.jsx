@@ -8,20 +8,18 @@ import UserTable from './UserTable';
 const UsersEditContain = () => {
   return (
     <Fragment>
-      <Breadcrumbs mainTitle='Edit Profile' parent='Users' title='Edit Profile' />
+      <Breadcrumbs mainTitle='Edit Blacklist Person' parent='Blacklist Person' title='Edit Blacklist Person' />
       <Container fluid={true}>
         <div className='edit-profile'>
           <Row>
-            <Col xl='4'>
-              <MyProfileEdit />
-            </Col>
-            <Col xl='8'>
+          <Col xl='3'></Col>
+            <Col xl='6'>
               <EditMyProfile />
-            </Col>
-            <Col md='12'>
               <UserTable />
             </Col>
-          </Row>
+            <Col xl='3'></Col>
+            </Row>
+          
         </div>
       </Container>
     </Fragment>

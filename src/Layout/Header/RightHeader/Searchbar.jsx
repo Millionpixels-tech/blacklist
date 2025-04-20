@@ -1,25 +1,27 @@
 import React, { useState } from 'react';
 import SvgIcon from '../../../Components/Common/Component/SvgIcon';
+import { Btn } from "../../../AbstractElements";
+import { Link } from "react-router-dom";
 
 const Searchbar = () => {
-  const [searchresponsive, setSearchresponsive] = useState(false);
-  const SeacrhResposive = (searchresponsive) => {
-    if (searchresponsive) {
-      setSearchresponsive(!searchresponsive);
-      document.querySelector('.search-full').classList.add('open');
-      document.querySelector('.more_lang').classList.remove('active');
-    } else {
-      setSearchresponsive(!searchresponsive);
-      document.querySelector('.search-full').classList.remove('open');
-    }
-  };
 
   return (
-    <li>
-      <span className='header-search'>
-        <SvgIcon iconId='search' onClick={() => SeacrhResposive(searchresponsive)} />
-      </span>
-    </li>
+    <>
+      <Link
+        to={`${process.env.PUBLIC_URL}/search-user`}
+        className="edit-icon"
+        style={{marginRight: '10px'}}
+      >
+          <Btn attrBtn={{ color: "primary" }}>Search Person</Btn>
+      </Link>
+      <Link
+        to={`${process.env.PUBLIC_URL}/add-person-to-blacklist`}
+        className="edit-icon"
+      >
+        <Btn attrBtn={{ color: "primary" }}>Add to Blacklist</Btn>
+      </Link>
+      
+    </>
   );
 };
 

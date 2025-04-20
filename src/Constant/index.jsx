@@ -417,7 +417,7 @@ export const AboutMe = "About Me";
 export const UpdateProfile = "Update Profile";
 export const UsersTableTitle = "Add projects And Upload";
 export const CompanyTableTitle = "Added Companies";
-export const UsersTableHeader = ["Company Name", "Date", "Status", "Description", ""];
+export const UsersTableHeader = [ "Date", "Agency Name", "Description"];
 export const Edit = "Edit";
 export const Update = "Update";
 export const Delete = "Delete";
@@ -1322,9 +1322,9 @@ export const scrollpara2 = "Contrary to popular belief, Lorem Ipsum is not simpl
 export const scrollpara3 = "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.";
 
 // pages
-export const RememberPassword = "Remember password";
+export const RememberPassword = "Save Password";
 export const ForgotPassword = "Forgot password?";
-export const SignIn = "Sign In";
+export const SignIn = "Log In";
 export const SignUp = "Sign Up";
 export const CreateAccount = "Create Account";
 export const FIREBASE = "FIREBASE";
