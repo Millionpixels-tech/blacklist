@@ -5,6 +5,7 @@ const Header: React.FC = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
+    localStorage.setItem('accessToken','');
     navigate('/login');
   };
 

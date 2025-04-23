@@ -17,7 +17,7 @@ const Login: React.FC = () => {
 
   const handleRegisterRedirect = () => {
     // Navigate to the Register page
-    navigate('/register');
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSedyCEZQbfEFAywVWFqQm1o9hG4JSIx1NNlyc4hW5-m0OD19A/viewform?usp=header', '_blank');
   };
 
   const loginAuth = async () => {
