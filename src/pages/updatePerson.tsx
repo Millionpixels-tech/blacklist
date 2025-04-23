@@ -148,7 +148,7 @@ const UpdatePerson: React.FC = () => {
 
   return (
     <><Header /><Breadcrumb /><div className="container mt-5" style={{ maxWidth: '600px' }}>
-      <h2 className="text-left mb-4">Edit Customer</h2>
+      <h2 className="text-left mb-4">Edit Person Details</h2>
 
       <form>
         <div className="mb-3">
