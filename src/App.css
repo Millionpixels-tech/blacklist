@@ -6,6 +6,10 @@
   height: 50px !important;
 }
 
+.edit-or-remove-btn {
+  width: 200px;
+}
+
 .update-person-input {
   height: 50px !important;
 }

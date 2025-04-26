@@ -12,6 +12,10 @@ interface User {
   passportNumber: string;
   fullName: string;
   nic: string;
+  user?: {
+    agencyName?: string;
+    phone_number?: string;
+  }
 }
 
 const SearchProfile: React.FC = () => {
@@ -80,28 +84,46 @@ const SearchProfile: React.FC = () => {
 
       {/* Display the users as cards */}
       {foundUser ? (
-          <div key={foundUser.nic} className="card mb-3 shadow-sm rounded-3">
-            <div className="card-body d-flex justify-content-between align-items-start flex-column flex-md-row">
-              
-              {/* Left Side: User Info */}
-              <div>
-                <h5 className="card-title mb-4 search-card-name"><b>{foundUser.fullName}</b></h5>
-                <p className="mb-1">NIC: <strong>{foundUser.nic}</strong></p>
-                <p className="mb-1">Passport No: <strong>{foundUser.passportNumber}</strong></p>
-                <p className="mb-0">{foundUser.description}</p>
-              </div>
+  <div key={foundUser.nic} className="card mb-3 shadow-sm rounded-3">
+    <div className="card-body">
+      
+      {/* Two columns */}
+      <div className="row col-md-12 p-3">
+        {/* Left Column */}
+        <div className="col-md-12">
+          <h5 className="card-title search-card-name mb-4"><b>{foundUser.fullName}</b></h5>
+        </div>
 
-              <div className="mt-3 mt-md-0 ms-md-4">
-                <Link to={`${process.env.PUBLIC_URL}/blacklist-Person/edit/${foundUser.id}`}>
-                  <button className="btn btn-outline-primary btn-sm">Edit or Remove This Person</button>
-                </Link>
-              </div>
+        <div className="col-md-9">
+          <p className="mb-1">NIC: <strong>{foundUser.nic}</strong></p>
+          <p className="mb-1">Passport No: <strong>{foundUser.passportNumber}</strong></p>
+        </div>
 
-            </div>
-          </div>
-      ) : (
-        <p>No user found</p>
-      )}
+        {/* Right Column */}
+        <div className="col-md-3">
+          
+          <p className="mb-1">Added By: <strong>{foundUser.user?.agencyName}</strong></p>
+          <p className="mb-1">Agency Contact No: <strong>{foundUser.user?.phone_number}</strong></p>
+        </div>
+
+        <div className="row col-md-12 mt-3">
+        <div className="col-12">
+          <p className="mt-2">{foundUser.description}</p>
+        </div>
+
+        <div className='row col-12 mt-3'>
+        <Link to={`${process.env.PUBLIC_URL}/blacklist-Person/edit/${foundUser.id}`}>
+            <button className="btn btn-outline-primary edit-or-remove-btn btn-sm mb-2">Edit or Remove This Person</button>
+          </Link>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+) : (
+  <p>No user found</p>
+)}
+
     </div></>
   );
 };
