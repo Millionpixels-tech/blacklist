@@ -10,6 +10,7 @@ import UpdatePerson from './pages/updatePerson';
 import AuthComponent from './pages/auth/authComponent';
 
 function App() {
+  //comment
   return (
     <Router> {/* Make sure BrowserRouter wraps everything */}
       <AuthComponent/>
