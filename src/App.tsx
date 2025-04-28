@@ -8,6 +8,7 @@ import SearchProfile from './pages/search';
 import Addperson from './pages/AddPerson';
 import UpdatePerson from './pages/updatePerson';
 import AuthComponent from './pages/auth/authComponent';
+import ChangePassword from './pages/auth/changePassword';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/admin/register/person" element={<Register />} />
           <Route path="/add-person" element={<Addperson />} />
           <Route path="/blacklist-Person/edit/:id" element={<UpdatePerson />} />
+          <Route path="/change-password" element={<ChangePassword />} />
         </Routes>
       </div>
     </Router>

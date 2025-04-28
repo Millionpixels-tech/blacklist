@@ -6,6 +6,10 @@
   height: 50px !important;
 }
 
+.change-password-input {
+  height: 50px !important;
+}
+
 .edit-or-remove-btn {
   width: 200px;
 }
