@@ -9,7 +9,7 @@ const Addperson: React.FC = () => {
   const history = useNavigate();
   const [message, setMessage] = useState<string | null>(null);
   const [status, setStatus] = useState<'danger' | 'success' | null>(null);
-  const [userType, setUserType] = useState('HOUSEMADE');
+  const [userType, setUserType] = useState('HOUSEMAID');
   const [formData, setFormData] = useState({
     fullName: '',
     nicNumber: '',
@@ -101,7 +101,7 @@ const Addperson: React.FC = () => {
   };
 
   const options = [
-    { value: 'HOUSEMADE', label: 'Housemade' },
+    { value: 'HOUSEMAID', label: 'Housemaid' },
     { value: 'SUBAGENT', label: 'Sub Agent' }
   ];
 
